@@ -6,11 +6,14 @@ function validation()
 {
 	if [[ $1 =~ $2 ]]
 	then
-		echo "valid First Name"
+		echo "valid Name"
 	else
-		echo "Invalid First Name"
+		echo "Invalid Name"
 	fi
 }
 
 read -p "enter First Name:" name
 validation $name $NAME_PATTERN
+
+read -p "enter last name: " lastName
+validation $lastName $NAME_PATTERN
