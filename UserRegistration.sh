@@ -1,8 +1,10 @@
 #!/bin/bash 
 
-NAME_PATTERN="^[A-Z]{1}[a-z]{2,}$"
+NAME_PATTERN="^[A-Z]{1}[a-zA-Z]{2,}$"
 EMAIL_PATTERN="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$"
-MOBILE_NUMBER_PATTERN="^[+]{1}[1-9]{2}[ ][0-9]{10}$"
+MOBILE_NUMBER_PATTERN="^[+]{1}[0-9]{2}[ ][0-9]{10}$"
+PASSWORD_MINIMUM_EIGHT_CHARACTER="^[A-Za-z]{8,}$"
+
 function validation()
 {
 	if [[ $1 =~ $2 ]]
@@ -28,3 +30,7 @@ validation $email $EMAIL_PATTERN
 #checking mobile pattern is valid or not
 read -p "enter mobile number: " mobileNumber
 validation $mobileNumber $MOBILE_NUMBER_PATTERN
+
+#checking password length
+read -p "enter password:" password
+validation $password $PASSWORD_MINIMUM_EIGHT_CHARACTER
