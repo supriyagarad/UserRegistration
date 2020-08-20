@@ -1,9 +1,11 @@
 #!/bin/bash
-shopt -s extglob 
-
+shopt -s extglob
+ 
+#constant
 NAME_PATTERN="^[A-Z]{1}[a-zA-Z]{2,}$"
 EMAIL_PATTERN="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$"
 MOBILE_NUMBER_PATTERN="^[+]{1}[0-9]{2}[ ][0-9]{10}$"
+
 PASSWORD_MINIMUM_EIGHT_CHARACTER="^[A-Za-z]{8,}$"
 PASSWORD_CONTAIN_AT_LIST_ONE_UPPERCASE_CHARACTER="^[A-Za-z]{8,}$"
 PASSWORD_CONTAIN_AT_LIST_ONE_DIGIT="^[0-9A-Za-z]{8,}$"
